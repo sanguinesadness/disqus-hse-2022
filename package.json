@@ -1,0 +1,30 @@
+{
+  "name": "disqus-hse-2022",
+  "version": "1.0.0",
+  "description": "Library for communicating with Disqus-api-nest",
+  "author": "Rustam Agamaliev",
+  "license": "MIT",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "devDependencies": {
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^17.0.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "universal-cookie": "^4.0.4"
+  }
+}
