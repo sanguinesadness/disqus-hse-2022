@@ -10,6 +10,7 @@ declare class UserApi extends BaseApi {
     getAll(): Promise<User[]>;
     register(dto: RegisterUserDto): Promise<UserTokens>;
     login(dto: LoginUserDto): Promise<UserTokens>;
+    getCurrent(): Promise<User>;
     logout(): Promise<void>;
     refresh(): Promise<UserTokens>;
 }

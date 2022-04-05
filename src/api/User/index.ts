@@ -35,6 +35,11 @@ class UserApi extends BaseApi {
     return resp.data;
   }
 
+  public async getCurrent(): Promise<User> {
+    const resp = await this._axios.get<User>("/current");
+    return resp.data;
+  }
+
   public async logout(): Promise<void> {
     this.removeAccessTokenCookie();
     return await this._axios.post("/logout");
